@@ -5,13 +5,13 @@
 - Δέσμευση μεθόδου της κλάσης (event handler) στο συμβάν `event` του template με χρήση του `(eventName)="onEventName($event)"`
  
   ```html
-<button (click)="onAddPerson()">Add Person</button>
+  <button (click)="onAddPerson()">Add Person</button>
   ```
  
 - Χρήση του event `input` από ένα HTML input element για ανάγνωση της τιμής του στην κλάση και στη συνέχεια πέρασμα πίσω στο template με χρήση της απλής δέσμευση με το `{{ <atribute_name > }}`
  
   ```html
-<input type="text" (input)="onInput($event)" />
+  <input type="text" (input)="onInput($event)" />
   ```
 
 ## Βήμα 4: @for Template Directive
@@ -21,7 +21,7 @@
  
   ```html
   @for (user of users; track user) {
-<app-person-table [person]="user"></app-person-table>
+  <app-person-table [person]="user"></app-person-table>
   }
   ```
 
@@ -52,10 +52,10 @@
 - Η δέσμευση των χαρακτηριστικών της κλάσης `AppComponent` στο χαρακτηριστικό `person` του component `PersonTableComponent` γίνεται στο template του component `AppComponent`
  
   ```html
-<app-person-table [person]="person0"></app-person-table>
-<!-- Χωρίς δέσμευση στο επόμενο -->
-<app-person-table></app-person-table>
-<app-person-table [person]="person1"></app-person-table>
+  <app-person-table [person]="person0"></app-person-table>
+  <!-- Χωρίς δέσμευση στο επόμενο -->
+  <app-person-table></app-person-table>
+  <app-person-table [person]="person1"></app-person-table>
   ```
 
 ## Βήμα 2: Δημιουργία νέου component
