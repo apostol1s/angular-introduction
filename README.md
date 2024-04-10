@@ -1,5 +1,23 @@
 # Εισαγωγή στο Angular Framework
 
+## Βήμα 13: ΗTTP Client Service
+
+- Για να μπορέσουμε να χρησιμοποιήσουμε τον HTTP Client είναι απαραίτητη η επέμβαση στο `app.config.ts` :
+
+  ```typescript
+  import { ApplicationConfig } from "@angular/core";
+  import { provideRouter } from "@angular/router";
+
+  import { routes } from "./app.routes";
+  import { provideAnimationsAsync } from "@angular/platform-browser/animations/async";
+
+  import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
+
+  export const appConfig: ApplicationConfig = {
+    providers: [provideRouter(routes), provideAnimationsAsync(), provideHttpClient(withInterceptorsFromDi())],
+  };
+  ```
+
 ## Βήμα 12: Reactive Forms
 
 - Ξεκινάμε με τα αντίστοιχα βήματα όπως στο βήμα 11.
